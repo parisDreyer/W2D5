@@ -68,7 +68,7 @@ class ResizingIntSet
   end
   
   def insert(num, &prc)
-    resize!() if @count >= @store.length
+    resize! if @count >= @store.length
     if include?(num)
       false 
     else 
@@ -78,6 +78,10 @@ class ResizingIntSet
       true 
     end 
     
+  end
+  
+  def length
+    @store.length
   end
   
   def remove(num, &prc)
@@ -91,7 +95,6 @@ class ResizingIntSet
   
   def include?(num)
     @store[num % @store.length].include?(num)
-    
   end
   
   private

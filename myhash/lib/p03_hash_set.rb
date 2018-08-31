@@ -12,7 +12,7 @@ class HashSet
   end
 
   def insert(key)
-    resize!
+    resize! if @count >= @store.length
     prc = Proc.new { |x| @count += x }
     @store.insert(key.hash, &prc)
   end
@@ -37,7 +37,6 @@ class HashSet
   end
 
   def resize!
-    
-    
+    @can_resize = false
   end
 end
