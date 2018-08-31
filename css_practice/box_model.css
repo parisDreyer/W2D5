@@ -1,0 +1,31 @@
+div {
+    height: 200px;
+    width: 400px;
+    padding: 25px;
+    border: 2.5px;
+    border-style: solid;
+    border-color: black;
+}
+
+#first-div {
+  height: auto;
+  margin: 0;
+  width: auto;
+  
+  background-color: #39cccc;
+}
+
+#contained-percent{
+  height: 20%;
+  width: 20%;
+  
+}
+
+#second-div {
+    background-color: #ff4136;
+    box-sizing: border-box;
+}
+
+p {
+  background-color: #7fdbff;
+}
